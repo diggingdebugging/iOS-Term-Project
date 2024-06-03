@@ -13,6 +13,12 @@
 		6A7111102C0D817E005919FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A71110E2C0D817E005919FC /* Main.storyboard */; };
 		6A7111122C0D817F005919FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A7111112C0D817F005919FC /* Assets.xcassets */; };
 		6A7111152C0D817F005919FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A7111132C0D817F005919FC /* LaunchScreen.storyboard */; };
+		6A71111D2C0D827A005919FC /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A71111C2C0D827A005919FC /* FriendsViewController.swift */; };
+		6A71111F2C0D82A2005919FC /* TalkRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A71111E2C0D82A2005919FC /* TalkRoomViewController.swift */; };
+		6A7111212C0D82B9005919FC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7111202C0D82B9005919FC /* SettingViewController.swift */; };
+		6A7111232C0D82E6005919FC /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7111222C0D82E6005919FC /* SignInViewController.swift */; };
+		6A7111252C0D8311005919FC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7111242C0D8311005919FC /* SignUpViewController.swift */; };
+		6A7111272C0D8325005919FC /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7111262C0D8325005919FC /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		6A7111112C0D817F005919FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A7111142C0D817F005919FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A7111162C0D817F005919FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A71111C2C0D827A005919FC /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		6A71111E2C0D82A2005919FC /* TalkRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkRoomViewController.swift; sourceTree = "<group>"; };
+		6A7111202C0D82B9005919FC /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		6A7111222C0D82E6005919FC /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		6A7111242C0D8311005919FC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6A7111262C0D8325005919FC /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,29 @@
 		6A7111072C0D817E005919FC /* TalkApp */ = {
 			isa = PBXGroup;
 			children = (
+				6A7111282C0D8684005919FC /* MainView */,
+				6A7111262C0D8325005919FC /* Data.swift */,
 				6A7111082C0D817E005919FC /* AppDelegate.swift */,
 				6A71110A2C0D817E005919FC /* SceneDelegate.swift */,
 				6A71110C2C0D817E005919FC /* ViewController.swift */,
+				6A7111222C0D82E6005919FC /* SignInViewController.swift */,
+				6A7111242C0D8311005919FC /* SignUpViewController.swift */,
 				6A71110E2C0D817E005919FC /* Main.storyboard */,
 				6A7111112C0D817F005919FC /* Assets.xcassets */,
 				6A7111132C0D817F005919FC /* LaunchScreen.storyboard */,
 				6A7111162C0D817F005919FC /* Info.plist */,
 			);
 			path = TalkApp;
+			sourceTree = "<group>";
+		};
+		6A7111282C0D8684005919FC /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				6A71111C2C0D827A005919FC /* FriendsViewController.swift */,
+				6A71111E2C0D82A2005919FC /* TalkRoomViewController.swift */,
+				6A7111202C0D82B9005919FC /* SettingViewController.swift */,
+			);
+			path = MainView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +164,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A71111F2C0D82A2005919FC /* TalkRoomViewController.swift in Sources */,
+				6A71111D2C0D827A005919FC /* FriendsViewController.swift in Sources */,
+				6A7111252C0D8311005919FC /* SignUpViewController.swift in Sources */,
 				6A71110D2C0D817E005919FC /* ViewController.swift in Sources */,
 				6A7111092C0D817E005919FC /* AppDelegate.swift in Sources */,
+				6A7111232C0D82E6005919FC /* SignInViewController.swift in Sources */,
 				6A71110B2C0D817E005919FC /* SceneDelegate.swift in Sources */,
+				6A7111272C0D8325005919FC /* Data.swift in Sources */,
+				6A7111212C0D82B9005919FC /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
