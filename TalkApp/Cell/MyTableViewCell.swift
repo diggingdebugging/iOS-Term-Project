@@ -24,9 +24,11 @@ class MyTableViewCell: UITableViewCell {
     func setupUI() {
         profileImageView.contentMode = .scaleAspectFill
         profileImageView.clipsToBounds = true
-        profileImageView.layer.cornerRadius = 30 // 이미지뷰를 원형으로 만들기 위해 코너를 설정
+        profileImageView.layer.cornerRadius = 10 // 이미지뷰를 원형으로 만들기 위해 코너를 설정
+        profileImageView.image = UIImage(named: "defaultImage")
         nameLabel.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         nameLabel.textColor = .black
+        nameLabel.text = "."
         
         contentView.addSubview(profileImageView)
         contentView.addSubview(nameLabel)

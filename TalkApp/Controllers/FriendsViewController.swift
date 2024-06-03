@@ -55,8 +55,7 @@ extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableViewCell", for: indexPath) as! MyTableViewCell
-            cell.nameLabel.text = user.name
-            cell.profileImageView = UIImageView(image: <#T##UIImage?#>)
+            cell.nameLabel.text = "나"
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsTableViewCell", for: indexPath) as! FriendsTableViewCell
@@ -70,9 +69,9 @@ extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return 80.0
+            return 90.0
         case 1:
-            return 60.0
+            return 70.0
         default:
             fatalError("Unexpected section")
         }
@@ -87,6 +86,8 @@ extension FriendsViewController {
         titleLabel.font = UIFont.systemFont(ofSize: 30, weight: .medium)
         titleLabel.textColor = .black
         titleLabel.textAlignment = .left
+        
+        //tableView.separatorStyle = .none // Remove the dividers
         
         addViews()
         setConstraints()
