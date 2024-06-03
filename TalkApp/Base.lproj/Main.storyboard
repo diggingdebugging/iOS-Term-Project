@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="친구" selectedImage="person" catalog="system" id="vkA-KR-wcV"/>
+                    <tabBarItem key="tabBarItem" title="친구" image="person.fill" catalog="system" selectedImage="person.fill" id="vkA-KR-wcV"/>
                     <navigationItem key="navigationItem" id="sCl-l3-uWq"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -51,6 +51,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="0bB-rX-Evm"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1G6-g8-Qom">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -74,7 +75,7 @@
                         <viewLayoutGuide key="safeArea" id="1bS-7u-BWr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="채팅" selectedImage="message.badge.fill" catalog="system" id="pBo-sQ-Pwk"/>
+                    <tabBarItem key="tabBarItem" title="채팅" image="message.fill" catalog="system" selectedImage="message.fill" id="pBo-sQ-Pwk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pZb-Na-2xm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,7 +91,7 @@
                         <viewLayoutGuide key="safeArea" id="UW9-62-evu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="설정" selectedImage="gearshape.fill" catalog="system" id="n52-qV-pcL"/>
+                    <tabBarItem key="tabBarItem" title="설정" image="gearshape.fill" catalog="system" selectedImage="gearshape.fill" id="n52-qV-pcL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="foF-IS-EET" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,8 +100,8 @@
     </scenes>
     <resources>
         <image name="gearshape.fill" catalog="system" width="128" height="123"/>
-        <image name="message.badge.fill" catalog="system" width="128" height="122"/>
-        <image name="person" catalog="system" width="128" height="121"/>
+        <image name="message.fill" catalog="system" width="128" height="114"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

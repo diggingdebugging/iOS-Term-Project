@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A403E7C2C0DFB9200210875 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A403E7B2C0DFB9200210875 /* Cell.swift */; };
 		6A7111092C0D817E005919FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7111082C0D817E005919FC /* AppDelegate.swift */; };
 		6A71110B2C0D817E005919FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A71110A2C0D817E005919FC /* SceneDelegate.swift */; };
 		6A71110D2C0D817E005919FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A71110C2C0D817E005919FC /* ViewController.swift */; };
@@ -18,13 +19,12 @@
 		6A7111212C0D82B9005919FC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7111202C0D82B9005919FC /* SettingViewController.swift */; };
 		6A7111232C0D82E6005919FC /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7111222C0D82E6005919FC /* SignInViewController.swift */; };
 		6A7111252C0D8311005919FC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7111242C0D8311005919FC /* SignUpViewController.swift */; };
-		6A7111272C0D8325005919FC /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7111262C0D8325005919FC /* Data.swift */; };
-		6A71112F2C0D9D05005919FC /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A71112E2C0D9D05005919FC /* FriendsView.swift */; };
 		A087D9A7EDE8FC8F86C65E84 /* Pods_TalkApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE81C497A3A78FFE29F5947E /* Pods_TalkApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E0095F8B2445774D418C02E /* Pods-TalkApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalkApp.release.xcconfig"; path = "Target Support Files/Pods-TalkApp/Pods-TalkApp.release.xcconfig"; sourceTree = "<group>"; };
+		6A403E7B2C0DFB9200210875 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		6A7111052C0D817E005919FC /* TalkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7111082C0D817E005919FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A71110A2C0D817E005919FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,8 +38,6 @@
 		6A7111202C0D82B9005919FC /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		6A7111222C0D82E6005919FC /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		6A7111242C0D8311005919FC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		6A7111262C0D8325005919FC /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		6A71112E2C0D9D05005919FC /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		B146307D021489A105E83D4D /* Pods-TalkApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalkApp.debug.xcconfig"; path = "Target Support Files/Pods-TalkApp/Pods-TalkApp.debug.xcconfig"; sourceTree = "<group>"; };
 		DE81C497A3A78FFE29F5947E /* Pods_TalkApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TalkApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -65,6 +63,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		6A403E7A2C0DFB7700210875 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6A403E7B2C0DFB9200210875 /* Cell.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		6A7110FC2C0D817E005919FC = {
 			isa = PBXGroup;
 			children = (
@@ -86,8 +92,7 @@
 		6A7111072C0D817E005919FC /* TalkApp */ = {
 			isa = PBXGroup;
 			children = (
-				6A71112D2C0D996B005919FC /* Views */,
-				6A71112A2C0D9394005919FC /* Data */,
+				6A403E7A2C0DFB7700210875 /* Data */,
 				6A7111282C0D8684005919FC /* Controllers */,
 				6A7111082C0D817E005919FC /* AppDelegate.swift */,
 				6A71110A2C0D817E005919FC /* SceneDelegate.swift */,
@@ -110,22 +115,6 @@
 				6A7111222C0D82E6005919FC /* SignInViewController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		6A71112A2C0D9394005919FC /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				6A7111262C0D8325005919FC /* Data.swift */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		6A71112D2C0D996B005919FC /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				6A71112E2C0D9D05005919FC /* FriendsView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		9EBC3FD57A1451D58737DFE3 /* Frameworks */ = {
@@ -251,15 +240,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A71112F2C0D9D05005919FC /* FriendsView.swift in Sources */,
 				6A71111F2C0D82A2005919FC /* TalkRoomViewController.swift in Sources */,
 				6A71111D2C0D827A005919FC /* FriendsViewController.swift in Sources */,
 				6A7111252C0D8311005919FC /* SignUpViewController.swift in Sources */,
 				6A71110D2C0D817E005919FC /* ViewController.swift in Sources */,
 				6A7111092C0D817E005919FC /* AppDelegate.swift in Sources */,
 				6A7111232C0D82E6005919FC /* SignInViewController.swift in Sources */,
+				6A403E7C2C0DFB9200210875 /* Cell.swift in Sources */,
 				6A71110B2C0D817E005919FC /* SceneDelegate.swift in Sources */,
-				6A7111272C0D8325005919FC /* Data.swift in Sources */,
 				6A7111212C0D82B9005919FC /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,7 +311,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
