@@ -10,18 +10,28 @@ import SnapKit
 
 class FriendsViewController: UIViewController {
     let tableView = UITableView()
-    let titleLabel = UILabel()
+    let titleLabel = UILabel()    
+    let user = User(name: "유진", userID: "1234")
+    var friendsList: [User]? = User.friends
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setDelegate()
-        setUI()
+        registerCellsToTableView()
+        setUI() // UI extension에 따로 정의
     }
     
-    func setDelegate(){
+    func setDelegate(){ // 역할위임
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+    func registerCellsToTableView() { // 셀 테이블뷰에 등록
+        tableView.register(MyTableViewCell.self, forCellReuseIdentifier: "MyTableViewCell")
+        tableView.register(FriendsTableViewCell.self, forCellReuseIdentifier: "FriendsTableViewCell")
+    }
+    
 }
 
 extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
@@ -34,7 +44,7 @@ extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
         case 0:
             return 1
         case 1:
-            return 10
+            return friendsList?.count ?? 0
         default:
             fatalError("Unexpected section")
         }
@@ -44,10 +54,13 @@ extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell = MyCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableViewCell", for: indexPath) as! MyTableViewCell
+            cell.nameLabel.text = user.name
+            cell.profileImageView = UIImageView(image: <#T##UIImage?#>)
             return cell
         case 1:
-            let cell = FriendsCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsTableViewCell", for: indexPath) as! FriendsTableViewCell
+            cell.nameLabel.text = friendsList?[indexPath.row].name
             return cell
         default:
             fatalError("Unexpected section")
