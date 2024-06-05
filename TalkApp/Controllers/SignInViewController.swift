@@ -33,19 +33,27 @@ extension SignInViewController {
         let password = signInView.passWordTextField.text ?? ""
         
         guard !email.isEmpty, !password.isEmpty else { return } // 둘 중에 하나라도 false 라면 함수종료!
-        Auth.auth().signIn(withEmail: email, password: password) // 실패시 어떻게 처리할지는 코드 안짰음
-        
-        guard let user = Auth.auth().currentUser else { return }
+        Auth.auth().signIn(withEmail: email, password: password) { dataResult, error in
+            if let error = error {
+                print("Error creating user: \(error.localizedDescription)")
+                return
+            }
+            
+            //guard let user = Auth.auth().currentUser else { return }
+            guard let user = dataResult?.user else {return}
 
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
-        tabBarController.modalPresentationStyle = .fullScreen
-        if let navController = tabBarController.viewControllers?[0] as? UINavigationController {
-            let firstViewController = navController.viewControllers.first as? FriendsSelectionViewController
-            firstViewController?.uid = user.uid
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let tabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
+            tabBarController.modalPresentationStyle = .fullScreen
+            if let navController = tabBarController.viewControllers?[0] as? UINavigationController {
+                let firstViewController = navController.viewControllers.first as? FriendsSelectionViewController
+                firstViewController?.uid = user.uid
+            }
+            
+            self.present(tabBarController, animated: true, completion: nil)
         }
         
-        self.present(tabBarController, animated: true, completion: nil)
+        
     }
     
     @objc func signUpButtonTouched(){ // 회원가입 페이지로 이동

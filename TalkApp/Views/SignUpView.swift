@@ -20,6 +20,13 @@ class SignUpView: UIView {
         $0.font = UIFont(name: "Jalnan2", size: 50)
     }
     
+    // name
+    let nameTextField = UITextField().then {
+        $0.backgroundColor = UIColor.lightGray
+        $0.placeholder = "이름"
+        $0.layer.cornerRadius = 5
+    }
+    
     // email
     let emailTextField = UITextField().then {
         $0.backgroundColor = UIColor.lightGray
@@ -67,6 +74,7 @@ class SignUpView: UIView {
     }
     
     func addViews(){
+        stackView.addArrangedSubview(nameTextField)
         stackView.addArrangedSubview(emailTextField)
         stackView.addArrangedSubview(passWordTextField)
         stackView.addArrangedSubview(signUpButton)
@@ -87,7 +95,7 @@ class SignUpView: UIView {
             $0.top.equalTo(titleLabel.snp.bottom).offset(50)
             $0.leading.equalTo(self.safeAreaLayoutGuide).inset(20)
             $0.trailing.equalTo(self.safeAreaLayoutGuide).inset(20)
-            $0.height.equalTo(150)
+            $0.height.equalTo(200)
         }
     }
 }

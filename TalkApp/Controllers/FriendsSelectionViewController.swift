@@ -69,6 +69,7 @@ extension FriendsSelectionViewController: UITableViewDataSource, UITableViewDele
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsTableViewCell", for: indexPath) as! FriendsTableViewCell
             cell.nameLabel.text = friendsList?[indexPath.row].name
+            //cell.nameLabel.text = user?.friends[indexPath.row].name
             return cell
         default:
             fatalError("Unexpected section")
@@ -124,7 +125,8 @@ extension FriendsSelectionViewController {
             
             let data = document.data()
             self.user = User.fromDict(dict: data)
-            //self.friendsSelectionView.tableView.reloadData()
+            
+            
             DispatchQueue.main.async {
                 self.friendsSelectionView.tableView.reloadData()
             }
