@@ -11,7 +11,7 @@
         <!--Friends Selection View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FriendsSelectionViewController" customModule="TalkApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FriendsSelectionViewController" id="BYZ-38-t0r" customClass="FriendsSelectionViewController" customModule="TalkApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="PIC-Ll-shW">
             <objects>
-                <viewController id="FCz-Uq-CmU" customClass="SignInViewController" customModule="TalkApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" id="FCz-Uq-CmU" customClass="SignInViewController" customModule="TalkApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FvS-BK-irD">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,7 +47,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="I9E-qH-zya">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="KbL-6z-FFu" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="KbL-6z-FFu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="0bB-rX-Evm"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1G6-g8-Qom">

@@ -26,9 +26,11 @@ class SignUpViewController: UIViewController {
 
 extension SignUpViewController {
     @objc func signUpButtonTouched(){ // 회원가입버튼
-        //
         let email = signUpView.emailTextField.text ?? ""
         let password = signUpView.passWordTextField.text ?? ""
+        
+        guard !email.isEmpty, !password.isEmpty else{return} // 둘 중에 하나라도 false 라면 함수종료!
+        
         Auth.auth().createUser(withEmail: email, password: password)
         
         // 회원가입 성공시 SignInViewController로 돌아감
@@ -36,6 +38,5 @@ extension SignUpViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
-        
     }
 }
