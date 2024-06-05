@@ -20,6 +20,7 @@
 		6A7111212C0D82B9005919FC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7111202C0D82B9005919FC /* SettingViewController.swift */; };
 		6A7111232C0D82E6005919FC /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7111222C0D82E6005919FC /* SignInViewController.swift */; };
 		6A7111252C0D8311005919FC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7111242C0D8311005919FC /* SignUpViewController.swift */; };
+		6AD89E122C10660200EBDA02 /* Jalnan2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AD89E112C10660200EBDA02 /* Jalnan2.otf */; };
 		6AF4988F2C0F6BB700A456C8 /* FriendsSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF4988E2C0F6BB700A456C8 /* FriendsSelectionView.swift */; };
 		6AF498922C0F7A3700A456C8 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF498912C0F7A3700A456C8 /* Database.swift */; };
 		6AF498942C10042700A456C8 /* ChatRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF498932C10042700A456C8 /* ChatRoomView.swift */; };
@@ -35,7 +36,8 @@
 		6AF498AC2C1041E000A456C8 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6AF498AB2C1041E000A456C8 /* FirebaseStorage */; };
 		6AF498AE2C1041FE00A456C8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6AF498AD2C1041FE00A456C8 /* FirebaseAuth */; };
 		6AF498B02C10420300A456C8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6AF498AF2C10420300A456C8 /* FirebaseFirestore */; };
-		6AF498B22C1043A400A456C8 /* SiginInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF498B12C1043A400A456C8 /* SiginInView.swift */; };
+		6AF498B22C1043A400A456C8 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF498B12C1043A400A456C8 /* SignInView.swift */; };
+		6AF498B42C10568400A456C8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF498B32C10568400A456C8 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,11 +56,13 @@
 		6A7111202C0D82B9005919FC /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		6A7111222C0D82E6005919FC /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		6A7111242C0D8311005919FC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6AD89E112C10660200EBDA02 /* Jalnan2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jalnan2.otf; sourceTree = "<group>"; };
 		6AF4988E2C0F6BB700A456C8 /* FriendsSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsSelectionView.swift; sourceTree = "<group>"; };
 		6AF498912C0F7A3700A456C8 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		6AF498932C10042700A456C8 /* ChatRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomView.swift; sourceTree = "<group>"; };
 		6AF498952C10388000A456C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		6AF498B12C1043A400A456C8 /* SiginInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiginInView.swift; sourceTree = "<group>"; };
+		6AF498B12C1043A400A456C8 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		6AF498B32C10568400A456C8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,7 @@
 				6A7111112C0D817F005919FC /* Assets.xcassets */,
 				6A7111162C0D817F005919FC /* Info.plist */,
 				6AF498952C10388000A456C8 /* GoogleService-Info.plist */,
+				6AD89E112C10660200EBDA02 /* Jalnan2.otf */,
 			);
 			path = TalkApp;
 			sourceTree = "<group>";
@@ -153,7 +158,8 @@
 			children = (
 				6AF4988E2C0F6BB700A456C8 /* FriendsSelectionView.swift */,
 				6AF498932C10042700A456C8 /* ChatRoomView.swift */,
-				6AF498B12C1043A400A456C8 /* SiginInView.swift */,
+				6AF498B12C1043A400A456C8 /* SignInView.swift */,
+				6AF498B32C10568400A456C8 /* SignUpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,6 +257,7 @@
 			files = (
 				6A7111152C0D817F005919FC /* LaunchScreen.storyboard in Resources */,
 				6AF498962C10388000A456C8 /* GoogleService-Info.plist in Resources */,
+				6AD89E122C10660200EBDA02 /* Jalnan2.otf in Resources */,
 				6A7111122C0D817F005919FC /* Assets.xcassets in Resources */,
 				6A7111102C0D817E005919FC /* Main.storyboard in Resources */,
 			);
@@ -264,9 +271,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A71111F2C0D82A2005919FC /* ChatRoomViewController.swift in Sources */,
+				6AF498B42C10568400A456C8 /* SignUpView.swift in Sources */,
 				6AF4988F2C0F6BB700A456C8 /* FriendsSelectionView.swift in Sources */,
 				6A71111D2C0D827A005919FC /* FriendsSelectionViewController.swift in Sources */,
-				6AF498B22C1043A400A456C8 /* SiginInView.swift in Sources */,
+				6AF498B22C1043A400A456C8 /* SignInView.swift in Sources */,
 				6A7111252C0D8311005919FC /* SignUpViewController.swift in Sources */,
 				6A403E812C0E0AB800210875 /* FriendsTableViewCell.swift in Sources */,
 				6A403E7F2C0E077700210875 /* MyTableViewCell.swift in Sources */,
