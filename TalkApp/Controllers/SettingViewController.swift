@@ -11,19 +11,26 @@ class SettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationBarUI()
         // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension SettingViewController {
+    func navigationBarUI(){
+        let titleLabel = UILabel().then {  // '친구' 제목
+            $0.text = "설정"
+            $0.font = UIFont.systemFont(ofSize: 30, weight: .medium)
+            $0.textColor = .black
+            $0.textAlignment = .left
+        }
+        
+        self.navigationController?.navigationBar.addSubview(titleLabel)
+        
+        titleLabel.snp.makeConstraints {
+            $0.leading.equalToSuperview().offset(16)
+            $0.centerY.equalToSuperview()
+        }
     }
-    */
-
 }

@@ -49,7 +49,7 @@ extension FriendsSelectionViewController: UITableViewDataSource, UITableViewDele
         case 0:
             return 1
         case 1:
-            return friendsList?.count ?? 0
+            return friendsList!.count
         default:
             fatalError("Unexpected section")
         }
