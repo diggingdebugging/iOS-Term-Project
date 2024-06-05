@@ -16,11 +16,14 @@
 		6A7111102C0D817E005919FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A71110E2C0D817E005919FC /* Main.storyboard */; };
 		6A7111122C0D817F005919FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A7111112C0D817F005919FC /* Assets.xcassets */; };
 		6A7111152C0D817F005919FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A7111132C0D817F005919FC /* LaunchScreen.storyboard */; };
-		6A71111D2C0D827A005919FC /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A71111C2C0D827A005919FC /* FriendsViewController.swift */; };
-		6A71111F2C0D82A2005919FC /* TalkRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A71111E2C0D82A2005919FC /* TalkRoomViewController.swift */; };
+		6A71111D2C0D827A005919FC /* FriendsSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A71111C2C0D827A005919FC /* FriendsSelectionViewController.swift */; };
+		6A71111F2C0D82A2005919FC /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A71111E2C0D82A2005919FC /* ChatRoomViewController.swift */; };
 		6A7111212C0D82B9005919FC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7111202C0D82B9005919FC /* SettingViewController.swift */; };
 		6A7111232C0D82E6005919FC /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7111222C0D82E6005919FC /* SignInViewController.swift */; };
 		6A7111252C0D8311005919FC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7111242C0D8311005919FC /* SignUpViewController.swift */; };
+		6AF4988F2C0F6BB700A456C8 /* FriendsSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF4988E2C0F6BB700A456C8 /* FriendsSelectionView.swift */; };
+		6AF498922C0F7A3700A456C8 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF498912C0F7A3700A456C8 /* Database.swift */; };
+		6AF498942C10042700A456C8 /* ChatRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF498932C10042700A456C8 /* ChatRoomView.swift */; };
 		A087D9A7EDE8FC8F86C65E84 /* Pods_TalkApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE81C497A3A78FFE29F5947E /* Pods_TalkApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,11 +40,14 @@
 		6A7111112C0D817F005919FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A7111142C0D817F005919FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A7111162C0D817F005919FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A71111C2C0D827A005919FC /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
-		6A71111E2C0D82A2005919FC /* TalkRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkRoomViewController.swift; sourceTree = "<group>"; };
+		6A71111C2C0D827A005919FC /* FriendsSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsSelectionViewController.swift; sourceTree = "<group>"; };
+		6A71111E2C0D82A2005919FC /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		6A7111202C0D82B9005919FC /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		6A7111222C0D82E6005919FC /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		6A7111242C0D8311005919FC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6AF4988E2C0F6BB700A456C8 /* FriendsSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsSelectionView.swift; sourceTree = "<group>"; };
+		6AF498912C0F7A3700A456C8 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		6AF498932C10042700A456C8 /* ChatRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomView.swift; sourceTree = "<group>"; };
 		B146307D021489A105E83D4D /* Pods-TalkApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalkApp.debug.xcconfig"; path = "Target Support Files/Pods-TalkApp/Pods-TalkApp.debug.xcconfig"; sourceTree = "<group>"; };
 		DE81C497A3A78FFE29F5947E /* Pods_TalkApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TalkApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -105,6 +111,8 @@
 		6A7111072C0D817E005919FC /* TalkApp */ = {
 			isa = PBXGroup;
 			children = (
+				6AF498902C0F79F500A456C8 /* Database */,
+				6AF4988D2C0F6BA700A456C8 /* Views */,
 				6A403E7D2C0E069400210875 /* Cell */,
 				6A403E7A2C0DFB7700210875 /* Data */,
 				6A7111282C0D8684005919FC /* Controllers */,
@@ -122,13 +130,30 @@
 		6A7111282C0D8684005919FC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6A71111C2C0D827A005919FC /* FriendsViewController.swift */,
-				6A71111E2C0D82A2005919FC /* TalkRoomViewController.swift */,
+				6A71111C2C0D827A005919FC /* FriendsSelectionViewController.swift */,
+				6A71111E2C0D82A2005919FC /* ChatRoomViewController.swift */,
 				6A7111202C0D82B9005919FC /* SettingViewController.swift */,
 				6A7111242C0D8311005919FC /* SignUpViewController.swift */,
 				6A7111222C0D82E6005919FC /* SignInViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6AF4988D2C0F6BA700A456C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6AF4988E2C0F6BB700A456C8 /* FriendsSelectionView.swift */,
+				6AF498932C10042700A456C8 /* ChatRoomView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6AF498902C0F79F500A456C8 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				6AF498912C0F7A3700A456C8 /* Database.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		9EBC3FD57A1451D58737DFE3 /* Frameworks */ = {
@@ -254,8 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A71111F2C0D82A2005919FC /* TalkRoomViewController.swift in Sources */,
-				6A71111D2C0D827A005919FC /* FriendsViewController.swift in Sources */,
+				6A71111F2C0D82A2005919FC /* ChatRoomViewController.swift in Sources */,
+				6AF4988F2C0F6BB700A456C8 /* FriendsSelectionView.swift in Sources */,
+				6A71111D2C0D827A005919FC /* FriendsSelectionViewController.swift in Sources */,
 				6A7111252C0D8311005919FC /* SignUpViewController.swift in Sources */,
 				6A403E812C0E0AB800210875 /* FriendsTableViewCell.swift in Sources */,
 				6A403E7F2C0E077700210875 /* MyTableViewCell.swift in Sources */,
@@ -264,6 +290,8 @@
 				6A7111232C0D82E6005919FC /* SignInViewController.swift in Sources */,
 				6A403E832C0E0C5100210875 /* User.swift in Sources */,
 				6A71110B2C0D817E005919FC /* SceneDelegate.swift in Sources */,
+				6AF498942C10042700A456C8 /* ChatRoomView.swift in Sources */,
+				6AF498922C0F7A3700A456C8 /* Database.swift in Sources */,
 				6A7111212C0D82B9005919FC /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

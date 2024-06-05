@@ -8,33 +8,38 @@
 import UIKit
 import SnapKit
 
-class FriendsViewController: UIViewController {
-    let tableView = UITableView()
-    let titleLabel = UILabel()    
+class FriendsSelectionViewController: UIViewController {
+    
     let user = User(name: "유진", userID: "1234")
     var friendsList: [User]? = User.friends
+    let friendsSelectionView = FriendsSelectionView()
+    
+    override func loadView() {
+        view = friendsSelectionView
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setDelegate()
         registerCellsToTableView()
-        setUI() // UI extension에 따로 정의
+        navigationBarUI()
+        
     }
     
     func setDelegate(){ // 역할위임
-        tableView.delegate = self
-        tableView.dataSource = self
+        friendsSelectionView.tableView.delegate = self
+        friendsSelectionView.tableView.dataSource = self
     }
     
     func registerCellsToTableView() { // 셀 테이블뷰에 등록
-        tableView.register(MyTableViewCell.self, forCellReuseIdentifier: "MyTableViewCell")
-        tableView.register(FriendsTableViewCell.self, forCellReuseIdentifier: "FriendsTableViewCell")
+        friendsSelectionView.tableView.register(MyTableViewCell.self, forCellReuseIdentifier: "MyTableViewCell")
+        friendsSelectionView.tableView.register(FriendsTableViewCell.self, forCellReuseIdentifier: "FriendsTableViewCell")
     }
     
 }
 
-extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
+extension FriendsSelectionViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -69,7 +74,7 @@ extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return 90.0
+            return 100.0
         case 1:
             return 70.0
         default:
@@ -78,41 +83,21 @@ extension FriendsViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-
-// UI구성
-extension FriendsViewController {
-    func setUI(){
-        titleLabel.text = "친구"
-        titleLabel.font = UIFont.systemFont(ofSize: 30, weight: .medium)
-        titleLabel.textColor = .black
-        titleLabel.textAlignment = .left
+extension FriendsSelectionViewController {
+    func navigationBarUI(){
+        let titleLabel = UILabel().then {  // '친구' 제목
+            $0.text = "친구"
+            $0.font = UIFont.systemFont(ofSize: 30, weight: .medium)
+            $0.textColor = .black
+            $0.textAlignment = .left
+        }
         
-        //tableView.separatorStyle = .none // Remove the dividers
+        self.navigationController?.navigationBar.addSubview(titleLabel)
         
-        addViews()
-        setConstraints()
-    }
-    
-    func setConstraints(){
         titleLabel.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(16)
             $0.centerY.equalToSuperview()
         }
-        
-        tableView.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).inset(0)
-            $0.bottom.equalTo(view.safeAreaLayoutGuide).inset(0)
-            $0.leading.equalTo(view.safeAreaLayoutGuide).inset(0)
-            $0.trailing.equalTo(view.safeAreaLayoutGuide).inset(0)
-        }
-        
-    }
-    
-    func addViews(){
-        self.navigationController?.navigationBar.addSubview(titleLabel)
-        view.addSubview(tableView)
     }
 }
-
-
 

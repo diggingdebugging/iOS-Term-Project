@@ -11,7 +11,7 @@
         <!--친구-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FriendsViewController" customModule="TalkApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FriendsSelectionViewController" customModule="TalkApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,7 +68,7 @@
         <!--채팅-->
         <scene sceneID="h6t-dI-saK">
             <objects>
-                <viewController id="Wl5-Xs-9IJ" customClass="TalkRoomViewController" customModule="TalkApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Wl5-Xs-9IJ" customClass="ChatRoomViewController" customModule="TalkApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lYn-14-sq5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="foF-IS-EET" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1856" y="833"/>
+            <point key="canvasLocation" x="1856" y="901"/>
         </scene>
     </scenes>
     <resources>

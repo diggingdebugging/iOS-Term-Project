@@ -8,12 +8,23 @@
 import UIKit
 
 class FriendsTableViewCell: UITableViewCell {
-    let profileImageView = UIImageView()
-    let nameLabel = UILabel()
+    
+    let profileImageView = UIImageView().then {
+        $0.contentMode = .scaleAspectFill
+        $0.clipsToBounds = true
+        $0.layer.cornerRadius = 10 // 이미지뷰를 원형으로 만들기 위해 코너를 설정
+        $0.image = UIImage(named: "defaultImage")
+    }
+    
+    let nameLabel = UILabel().then {
+        $0.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        $0.textColor = .black
+        $0.text = "."
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setupUI()
+        addViews()
         setConstraints()
     }
     
@@ -21,15 +32,7 @@ class FriendsTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupUI() {
-        profileImageView.contentMode = .scaleAspectFill
-        profileImageView.clipsToBounds = true
-        profileImageView.layer.cornerRadius = 10 // 이미지뷰를 원형으로 만들기 위해 코너를 설정
-        profileImageView.image = UIImage(named: "defaultImage")
-        nameLabel.font = UIFont.systemFont(ofSize: 18, weight: .medium)
-        nameLabel.textColor = .black
-        nameLabel.text = "."
-        
+    func addViews() {
         contentView.addSubview(profileImageView)
         contentView.addSubview(nameLabel)
     }

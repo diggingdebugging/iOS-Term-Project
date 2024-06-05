@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TalkRoomViewController: UIViewController {
+class ChatRoomViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
