@@ -35,10 +35,14 @@
                         <viewLayoutGuide key="safeArea" id="tck-qg-FRo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8bT-SW-keW"/>
+                    <connections>
+                        <segue destination="db3-e8-ukO" kind="show" identifier="GotoSignUpViewController" id="DKa-Ui-tgU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CAx-Av-les" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-740" y="-25"/>
+            <point key="canvasLocation" x="-1476" y="-25"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="I9E-qH-zya">
@@ -149,6 +153,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ft8-KY-iQN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1855.7251908396945" y="900.70422535211276"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="rqW-wG-Sdf">
+            <objects>
+                <viewController id="db3-e8-ukO" customClass="SignUpViewController" customModule="TalkApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JF7-QW-1r0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gfY-NR-8ia"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZT5-3K-Js2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HS4-88-TK2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-569" y="-25"/>
         </scene>
     </scenes>
     <resources>
