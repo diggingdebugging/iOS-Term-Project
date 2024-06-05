@@ -7,12 +7,14 @@
 
 import UIKit
 import SnapKit
+import FirebaseFirestore
 
 class FriendsSelectionViewController: UIViewController {
-    
-    let user = User(name: "유진", userID: "1234")
+    //    let userManager = UserManager()
+    var uid: String?
     var friendsList: [User]? = User.friends
     let friendsSelectionView = FriendsSelectionView()
+    var user: User?
     
     override func loadView() {
         view = friendsSelectionView
@@ -24,6 +26,7 @@ class FriendsSelectionViewController: UIViewController {
         setDelegate()
         registerCellsToTableView()
         navigationBarUI()
+        fetchUserData()
         
     }
     
@@ -39,6 +42,7 @@ class FriendsSelectionViewController: UIViewController {
     
 }
 
+// tableView 설정
 extension FriendsSelectionViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -60,7 +64,7 @@ extension FriendsSelectionViewController: UITableViewDataSource, UITableViewDele
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableViewCell", for: indexPath) as! MyTableViewCell
-            cell.nameLabel.text = "나"
+            cell.nameLabel.text = user?.name
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsTableViewCell", for: indexPath) as! FriendsTableViewCell
@@ -83,6 +87,7 @@ extension FriendsSelectionViewController: UITableViewDataSource, UITableViewDele
     }
 }
 
+// NavigationBar UI
 extension FriendsSelectionViewController {
     func navigationBarUI(){
         let titleLabel = UILabel().then {  // '친구' 제목
@@ -101,3 +106,30 @@ extension FriendsSelectionViewController {
     }
 }
 
+// Database
+
+extension FriendsSelectionViewController {
+    func fetchUserData() {
+        let db = Firestore.firestore()
+        db.collection("user").whereField("uid", isEqualTo: uid).getDocuments { querySnapshot, error in
+            if let error = error {
+                print("Error getting documents: \(error)")
+                return
+            }
+            
+            guard let documents = querySnapshot?.documents, let document = documents.first else {
+                print("No matching documents found")
+                return
+            }
+            
+            let data = document.data()
+            self.user = User.fromDict(dict: data)
+            //self.friendsSelectionView.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.friendsSelectionView.tableView.reloadData()
+            }
+            
+        }
+        
+    }
+}
