@@ -27,6 +27,10 @@ extension User {
     ]
 }
 
+struct UserInfo {
+    
+}
+
 
 
 

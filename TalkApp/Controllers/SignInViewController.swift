@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignInViewController: UIViewController {
     let signInView = SignInView()
@@ -16,9 +17,16 @@ class SignInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        addTarget()
     }
     
-    
-    
-    
+    func addTarget(){
+        signInView.signInButton.addTarget(self, action: #selector(signInButtonTouched), for: .touchUpInside)
+    }
+}
+
+extension SignInViewController {
+    @objc func signInButtonTouched(){
+        
+    }
 }

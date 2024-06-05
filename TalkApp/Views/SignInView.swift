@@ -21,24 +21,26 @@ class SignInView: UIView{
     
     // email
     let emailTextField = UITextField().then {
-        $0.backgroundColor = UIColor.gray
+        $0.backgroundColor = UIColor.lightGray
         $0.placeholder = "이메일"
         $0.layer.cornerRadius = 5
     }
     
     // password
     let passWordTextField = UITextField().then {
-        $0.backgroundColor = UIColor.gray
+        $0.backgroundColor = UIColor.lightGray
         $0.placeholder = "비밀번호"
         $0.layer.cornerRadius = 5
     }
     
     // loginbutton
-    let signinButton = UIButton().then {
+    let signInButton = UIButton().then {
         $0.setTitle("로그인", for: .normal)
         $0.backgroundColor = UIColor.black
         $0.setTitleColor(UIColor.white, for: .normal)
         $0.layer.cornerRadius = 5
+//        $0.layer.borderColor = UIColor.gray.cgColor
+//        $0.layer.borderWidth = 3
     }
     
     //stackview
@@ -68,7 +70,7 @@ class SignInView: UIView{
     func addViews(){
         stackView.addArrangedSubview(emailTextField)
         stackView.addArrangedSubview(passWordTextField)
-        stackView.addArrangedSubview(signinButton)
+        stackView.addArrangedSubview(signInButton)
         
         addSubview(titleLabel)
         addSubview(stackView)
