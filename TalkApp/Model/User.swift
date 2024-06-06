@@ -7,19 +7,15 @@
 
 import Foundation
 
-//struct User {
-//    let name: String
-//    let userID: String
-//}
-
 struct User {
     var uid: String
     var name: String
-    var friends: [User]?
+    var friendsUid: [String]?
     
-    init(name: String, uid: String) {
+    init(name: String, uid: String, friendsUid: [String]?) {
         self.uid = uid
         self.name = name
+        self.friendsUid = friendsUid
     }
 }
 
@@ -37,23 +33,10 @@ extension User{
         
         let uid = dict["uid"] as! String
         let name = dict["name"] as! String
+        let friendsUid = dict["friends"] as! [String]?
 
-        return User(name: name, uid: uid)
+        return User(name: name, uid: uid, friendsUid: friendsUid)
     }
-}
-
-extension User {
-    static let friends = [
-        User(name: "친구", uid: "1234"),
-        User(name: "친구", uid: "1234"),
-        User(name: "친구", uid: "1234"),
-        User(name: "친구", uid: "1234"),
-        User(name: "친구", uid: "1234"),
-        User(name: "친구", uid: "1234"),
-        User(name: "친구", uid: "1234"),
-        User(name: "친구", uid: "1234"),
-        User(name: "친구", uid: "1234")
-    ]
 }
 
 

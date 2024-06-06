@@ -9,7 +9,7 @@ import UIKit
 
 class ChatRoomViewController: UIViewController {
     
-    var friendsList: [User]? = User.friends
+    var friendsList: [User]? = []
     let chatRoomView = ChatRoomView()
     
     override func loadView() {

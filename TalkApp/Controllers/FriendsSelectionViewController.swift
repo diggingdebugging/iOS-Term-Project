@@ -11,10 +11,14 @@ import FirebaseFirestore
 
 class FriendsSelectionViewController: UIViewController {
     //    let userManager = UserManager()
-    var uid: String?
-    var friendsList: [User]? = User.friends
+    var uid: String? // 로그인에 성공하여 받은 uid
+    var currentUser: User? // 현재 사용자
+    
+    var friendsList: [User]? = []
     let friendsSelectionView = FriendsSelectionView()
-    var user: User?
+    
+    var dbFirebase: DbFirebase?
+    
     
     override func loadView() {
         view = friendsSelectionView
@@ -26,11 +30,10 @@ class FriendsSelectionViewController: UIViewController {
         setDelegate()
         registerCellsToTableView()
         navigationBarUI()
-        fetchUserData()
-        
+        loadUserData()
     }
     
-    func setDelegate(){ // 역할위임
+    func setDelegate(){ // tableView 역할위임
         friendsSelectionView.tableView.delegate = self
         friendsSelectionView.tableView.dataSource = self
     }
@@ -64,7 +67,7 @@ extension FriendsSelectionViewController: UITableViewDataSource, UITableViewDele
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableViewCell", for: indexPath) as! MyTableViewCell
-            cell.nameLabel.text = user?.name
+            cell.nameLabel.text = currentUser?.name
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsTableViewCell", for: indexPath) as! FriendsTableViewCell
@@ -108,27 +111,49 @@ extension FriendsSelectionViewController {
 }
 
 // Database
-
 extension FriendsSelectionViewController {
-    func fetchUserData() {
+    func loadUserData() {
         let db = Firestore.firestore()
-        db.collection("user").whereField("uid", isEqualTo: uid).getDocuments { querySnapshot, error in
+        db.collection("user").whereField("uid", isEqualTo: uid!).getDocuments { querySnapshot, error in
             if let error = error {
                 print("Error getting documents: \(error)")
                 return
             }
             
             guard let documents = querySnapshot?.documents, let document = documents.first else {
+                
                 print("No matching documents found")
                 return
             }
             
             let data = document.data()
-            self.user = User.fromDict(dict: data)
+            self.currentUser = User.fromDict(dict: data) // currentUser setting
             
+            // 친구가 없는 경우
+            guard let friendsUid = self.currentUser?.friendsUid, !friendsUid.isEmpty else {
+                print("No friends found")
+                DispatchQueue.main.async {
+                    self.friendsSelectionView.tableView.reloadData() //그냥 테이블뷰를 Reload(), 나의 정보만 load
+                }
+                return
+            }
             
-            DispatchQueue.main.async {
-                self.friendsSelectionView.tableView.reloadData()
+            db.collection("user").whereField("uid", in: friendsUid).getDocuments { querySnapshot, error in
+                if let error = error {
+                    print("Error getting documents: \(error)")
+                    return
+                }
+                
+                guard let documents = querySnapshot?.documents else {
+                    print("No matching documents found")
+                    return
+                }
+                
+                self.friendsList = documents.map { User.fromDict(dict: $0.data()) }
+                
+                DispatchQueue.main.async {
+                    self.friendsSelectionView.tableView.reloadData()
+                }
             }
             
         }

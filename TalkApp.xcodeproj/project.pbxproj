@@ -20,8 +20,8 @@
 		6A7111212C0D82B9005919FC /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7111202C0D82B9005919FC /* SettingViewController.swift */; };
 		6A7111232C0D82E6005919FC /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7111222C0D82E6005919FC /* SignInViewController.swift */; };
 		6A7111252C0D8311005919FC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7111242C0D8311005919FC /* SignUpViewController.swift */; };
+		6AC129AE2C11AC3300AD324E /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC129AD2C11AC3300AD324E /* ChatRoom.swift */; };
 		6AD89E122C10660200EBDA02 /* Jalnan2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AD89E112C10660200EBDA02 /* Jalnan2.otf */; };
-		6AD89E142C10AF8200EBDA02 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD89E132C10AF8200EBDA02 /* UserManager.swift */; };
 		6AD89E162C10BA0F00EBDA02 /* DbFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD89E152C10BA0F00EBDA02 /* DbFirebase.swift */; };
 		6AF4988F2C0F6BB700A456C8 /* FriendsSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF4988E2C0F6BB700A456C8 /* FriendsSelectionView.swift */; };
 		6AF498922C0F7A3700A456C8 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF498912C0F7A3700A456C8 /* Database.swift */; };
@@ -58,8 +58,8 @@
 		6A7111202C0D82B9005919FC /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		6A7111222C0D82E6005919FC /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		6A7111242C0D8311005919FC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6AC129AD2C11AC3300AD324E /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
 		6AD89E112C10660200EBDA02 /* Jalnan2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jalnan2.otf; sourceTree = "<group>"; };
-		6AD89E132C10AF8200EBDA02 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		6AD89E152C10BA0F00EBDA02 /* DbFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DbFirebase.swift; sourceTree = "<group>"; };
 		6AF4988E2C0F6BB700A456C8 /* FriendsSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsSelectionView.swift; sourceTree = "<group>"; };
 		6AF498912C0F7A3700A456C8 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
@@ -94,8 +94,8 @@
 		6A403E7A2C0DFB7700210875 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6AD89E132C10AF8200EBDA02 /* UserManager.swift */,
 				6A403E822C0E0C5100210875 /* User.swift */,
+				6AC129AD2C11AC3300AD324E /* ChatRoom.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,13 +282,13 @@
 				6A71111D2C0D827A005919FC /* FriendsSelectionViewController.swift in Sources */,
 				6AF498B22C1043A400A456C8 /* SignInView.swift in Sources */,
 				6A7111252C0D8311005919FC /* SignUpViewController.swift in Sources */,
-				6AD89E142C10AF8200EBDA02 /* UserManager.swift in Sources */,
 				6A403E812C0E0AB800210875 /* FriendsTableViewCell.swift in Sources */,
 				6A403E7F2C0E077700210875 /* MyTableViewCell.swift in Sources */,
 				6A7111092C0D817E005919FC /* AppDelegate.swift in Sources */,
 				6A7111232C0D82E6005919FC /* SignInViewController.swift in Sources */,
 				6A403E832C0E0C5100210875 /* User.swift in Sources */,
 				6AD89E162C10BA0F00EBDA02 /* DbFirebase.swift in Sources */,
+				6AC129AE2C11AC3300AD324E /* ChatRoom.swift in Sources */,
 				6A71110B2C0D817E005919FC /* SceneDelegate.swift in Sources */,
 				6AF498942C10042700A456C8 /* ChatRoomView.swift in Sources */,
 				6AF498922C0F7A3700A456C8 /* Database.swift in Sources */,

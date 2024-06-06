@@ -45,7 +45,7 @@ extension SignUpViewController {
             // Get the uid from the created user
             let uid = authResult.user.uid
             
-            let user = User(name: name, uid: uid)
+            let user = User(name: name, uid: uid, friendsUid: nil)
             
             let db = Firestore.firestore().collection("user").addDocument(data: User.toDict(user: user))
         }

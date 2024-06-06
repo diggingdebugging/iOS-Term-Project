@@ -22,8 +22,20 @@ class DbFirebase: Database{
         if let query = existQuery{
             query.remove()
         }
+        // 쿼리를 설정할때 내 친구들의 정보만 쿼리해야함.
+        let document = reference.document("friends")
         
-        let query = reference.whereField("id", isGreaterThanOrEqualTo: 0).whereField("id", isLessThanOrEqualTo: 10000)
+        var uidArr: [String]?
+        
+        document.getDocument { document, error in
+            if let document = document, document.exists {
+                uidArr = document.get("friends") as? [String]
+            } else {
+                print("문서를 불러오지 못했습니다: \(error?.localizedDescription ?? "Unknown error")")
+            }
+        }
+        
+        let query = reference.whereField("uid", arrayContains: uidArr!)
         existQuery = query.addSnapshotListener(onChangingData)
     }
     
@@ -44,9 +56,9 @@ class DbFirebase: Database{
             let dict = documentChange.document.data()
             var action: DbAction?
             switch(documentChange.type){
-                case .added: action = .add
-                case .modified: action = .modify
-                case .removed: action = .delete
+            case .added: action = .add
+            case .modified: action = .modify
+            case .removed: action = .delete
             }
             if let parentNotification = parentNotification {parentNotification(dict, action)}
         }
@@ -62,7 +74,7 @@ class DbFirebase: Database{
 //        metaData.contentType = "image/jpeg"
 //        reference.putData(imageData, completion: nil)
 //    }
-//    
+//
 //    func downloadImage(imageName: String, completion: @escaping (UIImage?) -> Void) {
 //        let reference = Storage.storage().reference().child("cities").child(imageName)
 //        let megaByte = Int64(10 * 1024 * 1024)
